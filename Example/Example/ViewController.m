@@ -36,7 +36,7 @@
 						 [NSURL URLWithString:@"https://support.lisacintosh.com"],
 						 [NSURL URLWithString:@"https://lisacintosh.com"] ];
 	
-	controller.repositoryURL = [NSURL URLWithString:[@"https://github.com/lisapple/à-propos" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	controller.repositoryURL = [NSURL URLWithString:[@"https://github.com/lisapple/a-propos" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	
 	UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
 	[self presentViewController:navigationController animated:YES completion:nil];
