@@ -7,6 +7,9 @@
 
 #import "AProposViewController.h"
 
+#define LocalizedString(key, default) \
+	[NSBundle.mainBundle localizedStringForKey:(key) value:(default) table:nil]
+
 NSString * shortDescriptionForLicenceType(ApplicationLicenceType licenceType) {
 	switch (licenceType) {
 		case ApplicationLicenceTypeMIT:		return @"MIT";
@@ -50,7 +53,7 @@ NSString * shortDescriptionForLicenceType(ApplicationLicenceType licenceType) {
 {
 	[super viewDidLoad];
 
-	self.title = NSLocalizedString(@"About", nil);
+	self.title = LocalizedString(@"a-propos.title", @"About");
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
 																						  target:self action:@selector(doneAction:)];
 	
@@ -90,7 +93,7 @@ NSString * shortDescriptionForLicenceType(ApplicationLicenceType licenceType) {
 					name, shortVersion, _author, [NSDate date].year];
 		}
 		case 2: {
-			return [NSString stringWithFormat:NSLocalizedString(@"%@ is an open-source projet, under %@ license.", nil),
+			return [NSString stringWithFormat:LocalizedString(@"a-propos.licence.description", @"%@ is an open-source projet, under %@ licence."),
 					name, shortDescriptionForLicenceType(_licenceType)];
 		}
 		default: break;

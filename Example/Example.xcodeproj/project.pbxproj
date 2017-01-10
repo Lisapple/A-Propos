@@ -13,6 +13,7 @@
 		50B6F3E91E251644000A3780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B6F3E81E251644000A3780 /* Assets.xcassets */; };
 		50B6F3F81E251859000A3780 /* AProposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B6F3F71E251859000A3780 /* AProposViewController.m */; };
 		50BE407C1E25696800A4A033 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BE407B1E25696800A4A033 /* Launch.storyboard */; };
+		50BE407F1E259A3E00A4A033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50BE40811E259A3E00A4A033 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		50B6F3F61E251859000A3780 /* AProposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AProposViewController.h; path = ../Classes/AProposViewController.h; sourceTree = SOURCE_ROOT; };
 		50B6F3F71E251859000A3780 /* AProposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AProposViewController.m; path = ../Classes/AProposViewController.m; sourceTree = SOURCE_ROOT; };
 		50BE407B1E25696800A4A033 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		50BE40801E259A3E00A4A033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				50B6F3DD1E251644000A3780 /* main.m */,
+				50BE40811E259A3E00A4A033 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B6F3E91E251644000A3780 /* Assets.xcassets in Resources */,
+				50BE407F1E259A3E00A4A033 /* Localizable.strings in Resources */,
 				50BE407C1E25696800A4A033 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +172,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50BE40811E259A3E00A4A033 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50BE40801E259A3E00A4A033 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		50B6F3EE1E251644000A3780 /* Debug */ = {
