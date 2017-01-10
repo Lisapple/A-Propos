@@ -11,7 +11,9 @@ typedef NS_ENUM(NSUInteger, ApplicationLicenceType) {
 	ApplicationLicenceTypePrivate = 0,
 	
 	ApplicationLicenceTypeMIT,
+	ApplicationLicenceTypeGNU,
 	ApplicationLicenceTypeApache,
+	ApplicationLicenceTypeApacheV2,
 	ApplicationLicenceTypePublicDomain
 };
 extern NSString * _Nullable shortDescriptionForLicenceType(ApplicationLicenceType licenceType);

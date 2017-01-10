@@ -9,8 +9,10 @@
 
 NSString * shortDescriptionForLicenceType(ApplicationLicenceType licenceType) {
 	switch (licenceType) {
-		case ApplicationLicenceTypeMIT: return @"MIT";
-		case ApplicationLicenceTypeApache: return @"Apache";
+		case ApplicationLicenceTypeMIT:		return @"MIT";
+		case ApplicationLicenceTypeGNU:		return @"GNU General Public 3.0";
+		case ApplicationLicenceTypeApache:	return @"Apache";
+		case ApplicationLicenceTypeApacheV2: return @"Apache 2.0";
 		case ApplicationLicenceTypePublicDomain: return @"public domain";
 		default: break;
 	}
