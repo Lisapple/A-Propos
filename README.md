@@ -9,6 +9,7 @@ The code source is under public domain.
 
 [Lisacintosh](https://lisacintosh.com/), 2017
 
+![Screenshot](https://raw.githubusercontent.com/Lisapple/A-Propos/master/Example/Screenshot@2x.png)
 
 Carthage
 --------
