@@ -19,9 +19,9 @@ Carthage
 * Create a `Cartfile` file with:
 
 ```
-github "lisapple/à-propos"
+github "lisapple/a-propos"
 ```
 
 * Run `carthage update` to get last version of À Propos.
 
-* Manually import classes form `Carthage/Checkouts/à-propos/Classes` into Xcode project (do not copy files if you want to update them later).
+* Manually import classes form `Carthage/Checkouts/a-propos/Classes` into Xcode project (do not copy files if you want to update them from this repository later).
