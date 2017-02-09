@@ -1,9 +1,7 @@
 //
 //  main.m
-//  AboutIt
 //
 //  Created by Max on 10/01/2017.
-//  Copyright © 2017 Lisacintosh. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

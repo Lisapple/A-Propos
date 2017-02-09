@@ -31,12 +31,12 @@
 {
 	AProposViewController * controller = [[AProposViewController alloc] init];
 	controller.author = @"Lisacintosh";
-	controller.licenceType = ApplicationLicenceTypePublicDomain;
-	controller.urls = @[ [NSURL URLWithString:@"https://appstore.com/lisacintosh"],
-						 [NSURL URLWithString:@"https://support.lisacintosh.com"],
-						 [NSURL URLWithString:@"https://lisacintosh.com"] ];
+	controller.licenseType = ApplicationLicenseTypePublicDomain;
+	[controller setURLsStrings:@[ @"appstore.com/lisacintosh",
+								  @"http://support.lisacintosh.com",
+								  @"http://lisacintosh.com" ]];
 	
-	controller.repositoryURL = [NSURL URLWithString:[@"https://github.com/lisapple/a-propos" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	controller.repositoryURL = [NSURL URLWithString:@"https://github.com/lisapple/a-propos"];
 	
 	UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
 	[self presentViewController:navigationController animated:YES completion:nil];
