@@ -115,8 +115,12 @@ NSString * localizedDescriptionForLicenseType(ApplicationLicenseType licenseType
 	switch (section) {
 		case 0: {
 			const NSString * shortVersion = infoDictionary[@"CFBundleShortVersionString"];
-			return [NSString stringWithFormat:@"%@ %@" @"\n" @"%@, %lu",
-					name, shortVersion, _author, [NSDate date].ap_year];
+			NSString * nameString = [NSString stringWithFormat:@"%@ %@", name, shortVersion];
+			if (_showsBuildNumber) {
+				const NSString * buildVersion = infoDictionary[(__bridge_transfer NSString *)kCFBundleVersionKey];
+				nameString = [nameString stringByAppendingFormat:@" (%@)", buildVersion];
+			}
+			return [nameString stringByAppendingFormat:@"\n" @"%@, %lu", _author, (unsigned long)[NSDate date].ap_year];
 		}
 		case 2: {
 			return [NSString stringWithFormat:LocalizedString(@"a-propos.license.description", @"%@ is an open-source projet, under %@ license."),

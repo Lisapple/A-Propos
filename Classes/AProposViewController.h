@@ -53,6 +53,12 @@ extern NSString * _Nullable localizedDescriptionForLicenseType(ApplicationLicens
 @property (nonatomic, assign) ApplicationLicenseType licenseType;
 
 /**
+ If true, displays build number next to app version.
+ Default to false.
+ */
+@property (nonatomic, assign) BOOL showsBuildNumber;
+
+/**
  Human-readable name of the application author. Required.
  */
 @property (nonatomic, strong) NSString * author;
