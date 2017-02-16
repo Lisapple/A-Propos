@@ -29,9 +29,9 @@
 
 - (void)presentAboutAction:(id)sender
 {
-	AProposViewController * controller = [[AProposViewController alloc] init];
+	ApplicationLicenseType license = ApplicationLicenseTypePublicDomain;
+	AProposViewController * controller = [[AProposViewController alloc] initWithLicenseType:license];
 	controller.author = @"Lisacintosh";
-	controller.licenseType = ApplicationLicenseTypePublicDomain;
 	[controller setURLsStrings:@[ @"appstore.com/lisacintosh",
 								  @"http://support.lisacintosh.com",
 								  @"http://lisacintosh.com" ]];
