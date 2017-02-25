@@ -22,8 +22,21 @@ NSString * identifierForLicenseType(ApplicationLicenseType licenseType) {
 	return nil;
 }
 
+NSString * descriptionForLicenseType(ApplicationLicenseType licenseType) {
+	switch (licenseType) {
+		case ApplicationLicenseTypeMIT:		return @"MIT";
+		case ApplicationLicenseTypeGNU:		return @"GNU General Public 3.0";
+		case ApplicationLicenseTypeApache:	return @"Apache";
+		case ApplicationLicenseTypeApache2: return @"Apache 2.0";
+		case ApplicationLicenseTypePublicDomain: return @"public domain";
+		default: break;
+	}
+	return nil;
+}
+
 NSString * localizedDescriptionForLicenseType(ApplicationLicenseType licenseType) {
-	return LocalizedString(identifierForLicenseType(licenseType), nil);
+	return LocalizedString(identifierForLicenseType(licenseType),
+						   descriptionForLicenseType(licenseType)); // Fallback to default description if no localization file found
 }
 
 @implementation NSDate (YearAddition)
@@ -173,3 +186,5 @@ NSString * localizedDescriptionForLicenseType(ApplicationLicenseType licenseType
 }
 
 @end
+
+#undef LocalizedString

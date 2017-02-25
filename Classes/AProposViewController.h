@@ -40,6 +40,11 @@ typedef NS_ENUM(NSUInteger, ApplicationLicenseType) {
 extern NSString * _Nullable identifierForLicenseType(ApplicationLicenseType licenseType);
 
 /**
+ Returns non-localized license description.
+ */
+extern NSString * _Nullable descriptionForLicenseType(ApplicationLicenseType licenseType);
+
+/**
  Returns localized license description.
  */
 extern NSString * _Nullable localizedDescriptionForLicenseType(ApplicationLicenseType licenseType);
