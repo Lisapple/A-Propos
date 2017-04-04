@@ -165,10 +165,13 @@ NSString * localizedDescriptionForLicenseType(ApplicationLicenseType licenseType
 		SFSafariViewController * viewController = [[SFSafariViewController alloc] initWithURL:url];
 		[self presentViewController:viewController animated:YES completion:nil];
 	} else {
-		if ([UIApplication instancesRespondToSelector:@selector(openURL:options:completionHandler:)]) {
+		if ([UIApplication instancesRespondToSelector:@selector(openURL:options:completionHandler:)]) { // iOS 10+
 			[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
-		} else {
+		} else { // iOS 9-
+#pragma clang diagnostic begin
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 			[[UIApplication sharedApplication] openURL:url];
+#pragma clang diagnostic end
 		}
 	}
 }
